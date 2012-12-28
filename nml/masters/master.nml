@@ -1,0 +1,74 @@
+/*
+    Copyright (C)  2012 Sam Bolingbroke
+	
+	This file is part of the Traction Depot Irish Trainset
+	
+	
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+ 
+//Traction Depot newGRF
+
+/* ********************************************
+			Setup Stuff
+**********************************************/
+
+
+grf {
+	grfid: "SB\11\93";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	version: 011;
+	min_compatible_version: 0;
+}
+railtypetable {
+    RAIL, ELRL, 
+}
+train_width_32_px = 1;
+ disable_item(FEAT_TRAINS, 0, 115);
+
+
+/* ********************************************
+			Sprite Templates
+**********************************************/
+
+
+template tmpl_standard_row(y){
+[	 0, y, 8,24, -3,-13]
+[	 9, y,22,20,-13,-11]
+[	32, y,32,17,-16,-12]
+[   65, y,22,20, -5,-11]
+[	88, y, 8,24, -3,-11]
+[	97, y,22,20,-13,-11]
+[  120, y,32,17,-16,-12]
+[  153, y,22,20, -5,-11]
+
+
+}
+template tmpl_half_row(y){
+[   0, y, 8,24, -3,-13]
+[	9, y,22,20,-13,-11]
+[  32, y,32,17,-16,-12]
+[  65, y,22,20, -5,-11]
+}
+template tmpl_vehicle_purchase() {
+    [0, 0, 32, 12, -3, -6]
+}
+cargotable {
+    PASS, COAL, MAIL, OIL_, LVST, GOOD, GRAI, WOOD, IORE, STEL, VALU, PAPR, WHEA, FOOD, GOLD, RUBR, FRUT, MAIZ, CORE, WATR, DIAM, SUGR, TOYS, BATT, SWET, TOFF, COLA, CTCD, BUBL, PLST, FZDR, AORE, BEER, BDMT, BRCK, CERA, CERE, CLAY, CMNT, COPR, DYES, ENSP, FERT, FICR, FISH, FMSP, FRVG, GLAS, GRVL, LIME, MILK, MNSP, OLSD, PETR, PLAS, POTA, RCYC, RFPR, SAND, SCMT, SGBT, SGCN, SULP, TOUR, VEHI, WDPR, WOOL
+}
+
+

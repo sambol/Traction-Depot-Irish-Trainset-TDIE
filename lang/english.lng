@@ -1,0 +1,89 @@
+#    Copyright (C)  2012 Sam Bolingbroke
+#	
+#	This file is part of the Traction Depot Irish Trainset
+#	
+#	
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License along
+#    with this program; if not, write to the Free Software Foundation, Inc.,
+#    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+##grflangid 0x01
+# This is the English language file
+
+# GRF name and description definitions
+STR_GRF_NAME        :{TITLE} {VERSION}
+STR_GRF_DESCRIPTION :{TITLE} newGRF{}v{VERSION}{}{COPYRIGHT}2013 Traction Depot
+
+# Vehcles
+
+#Diesel Locos
+STR_NAME_DLOCO001	:CIE 001 Class Locomotive
+STR_NAME_DLOCO071	:CIE 071 Class Locomotive
+STR_NAME_DLOCO101	:CIE 101 Class Locomotive
+STR_NAME_DLOCO113	:CIE 113 Class Locomotive
+STR_NAME_DLOCO121	:CIE 121 Class Locomotive
+STR_NAME_DLOCO141	:CIE 141 Class Locomotive
+STR_NAME_DLOCO181	:CIE 181 Class Locomotive
+STR_NAME_DLOCO201	:CIE 201 Class Locomotive
+STR_NAME_DLOCO301	:CIE 301 Class Locomotive
+STR_NAME_DLOCO401	:CIE 401 Class Locomotive
+STR_NAME_DLOCO421	:CIE 421 Class Locomotive
+STR_NAME_DLOCO601	:CIE 601 Class Locomotive
+STR_NAME_DLOCO611	:CIE 611 Class Locomotive
+STR_NAME_DLOCO801	:CIE 801 Class Locomotive
+STR_NAME_DLOCO201IE	:IE 201 Class Locomotive
+
+
+# EMUs
+STR_NAME_EMU8100	:CIE 8100 Unit
+STR_NAME_EMUIE8200	:IE 8200 Unit
+STR_NAME_EMUIE8500	:IE 8500 Unit
+STR_NAME_EMUIE8510	:IE 8510 Unit
+STR_NAME_EMUIE8520	:IE 8520 Unit
+
+# DMUs
+STR_NAME_DMU2600	:CIE 2600 Unit
+STR_NAME_DMUIE2600	:IE 2600 Unit
+STR_NAME_DMUIE2700	:IE 2700 Unit
+STR_NAME_DMUIE2750	:IE 2750 Unit
+STR_NAME_DMUIE2800	:IE 2800 Unit
+STR_NAME_DMUIE22000_THREE	:IE 22000 Unit 3 car
+STR_NAME_DMUIE22000_SIX	:IE 22000 Unit 6 car
+STR_NAME_DMUIE29000	:IE 29000 Unit
+
+# Pax Stock
+STR_NAME_PSTOCKLAMINATE		:Laminate Passenger Car
+STR_NAME_PSTOCKPARKROYAL	:Park Royal Passenger Car
+STR_NAME_PSTOCKCRAVENS		:Cravens Passenger Car
+STR_NAME_PSTOCKMK2			:Mk2 Passenger Car
+STR_NAME_PSTOCKMK3			:Mk3 Passenger Car
+STR_NAME_PSTOCKMK4			:Mk4 Passenger Car
+STR_NAME_PSTOCKDD			:De Dietrich Passenger Car
+
+
+# Freight Stock
+STR_NAME_WAGON_CONTAINER	:Container Carrier
+STR_NAME_WAGON_HOPPER		:Hopper Wagon
+STR_NAME_WAGON_FLAT			:Flat Wagon
+STR_NAME_WAGON_MAIL			:Mail Wagon
+STR_NAME_WAGON_ARMOURED		:Armoured Wagon
+STR_NAME_WAGON_GONDOLA		:Gondola Wagon
+STR_NAME_WAGON_REFRIDGERATED:Refridgerated Wagon
+STR_NAME_WAGON_BOXCAR		:Box Wagon
+STR_NAME_WAGON_TANK			:Tank Wagon
+STR_NAME_WAGON_LIVESTOCK	:Livestock Wagon
+STR_NAME_WAGON_COIL			:Coil Wagon
+STR_NAME_WAGON_AUTORACK		:Autorack Wagon
+
+
+
