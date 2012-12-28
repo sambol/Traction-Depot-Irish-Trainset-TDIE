@@ -1,0 +1,79 @@
+/*
+    Copyright (C)  2012 Sam Bolingbroke
+	
+	This file is part of the Traction Depot Irish Trainset
+	
+	
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+spriteset (set_wagon_hopper_purchase, "gfx/fstock/hopper.png") { tmpl_vehicle_purchase()}
+spriteset (set_wagon_hopper_empty, "gfx/fstock/hopper.png") { tmpl_half_row(15) }
+
+	
+	
+spriteset (set_wagon_hopper_1_half, "gfx/fstock/hopper.png") { tmpl_half_row(40) }
+spriteset (set_wagon_hopper_1_full, "gfx/fstock/hopper.png") { tmpl_half_row(65) }
+spritegroup spritegroup_wagon_hopper_1 {
+	loading: [set_wagon_hopper_empty, set_wagon_hopper_1_half, set_wagon_hopper_1_full];
+	loaded:  [set_wagon_hopper_empty, set_wagon_hopper_1_half, set_wagon_hopper_1_full];
+}
+
+
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_hopper) {
+	1: spritegroup_wagon_hopper_1;
+
+}
+
+
+item(FEAT_TRAINS, item_wagon_hopper) {
+
+    property {
+        name:                         string(STR_NAME_WAGON_HOPPER);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);     // not available in toyland:
+        introduction_date:            date(1945, 3, 1);
+        model_life:                   VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                 65;
+	    reliability_decay:            20;
+		refittable_cargo_classes: bitmask(CC_BULK); 
+		non_refittable_cargo_classes: bitmask(CC_NON_POURABLE); 
+		cargo_allow_refit: [COAL, GRAI, IORE, WHEA, MAIZ, CORE, SUGR, PLST, AORE, CERE, CLAY, CMNT, FERT, FICR, GRVL, LIME, OLSD, PLAS, POTA, SAND, SGBT, SULP]; 
+		cargo_disallow_refit: [PASS, MAIL, OIL_, LVST, GOOD, WOOD, STEL, VALU, PAPR, FOOD, GOLD, RUBR, FRUT, WATR, DIAM, TOYS, BATT, SWET, TOFF, COLA, CTCD, BUBL, FZDR, BEER, BDMT, BRCK, CERA, COPR, DYES, ENSP, FISH, FMSP, FRVG, GLAS, MILK, MNSP, PETR, RCYC, RFPR, SCMT, SGCN, TOUR, VEHI, WDPR, WOOL];
+
+
+        loading_speed:                10; 
+        ai_special_flag: AI_FLAG_CARGO;
+        cost_factor:                  45;
+        running_cost_factor:          3; 
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        100 km/h; 
+        misc_flags:                   bitmask();
+        refit_cost:                   0; 
+        track_type:                   RAIL; 
+        running_cost_base:            RUNNING_COST_NONE;
+        dual_headed:                  0;
+        cargo_capacity:               72; 
+        weight:                       33 ton; 
+        ai_engine_rank:               80; 
+        air_drag_coefficient:         0.07;
+        bitmask_vehicle_info:         0;
+		length:						  8;
+    }
+    graphics {
+
+        purchase:                     set_wagon_hopper_purchase;
+		switch_wagon_hopper;
+    }
+}
