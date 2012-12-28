@@ -1,0 +1,9 @@
+#Remove NML Compiler
+*.py*
+*.exe
+*.dll
+TDIE.nml
+TDIE.linux.nml
+
+#Remove Compiled Versions
+*.grf*
