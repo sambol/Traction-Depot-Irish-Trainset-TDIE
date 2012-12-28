@@ -1,0 +1,62 @@
+/*
+    Copyright (C)  2012 Sam Bolingbroke
+	
+	This file is part of the Traction Depot Irish Trainset
+	
+	
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+spriteset (set_wagon_tanks_purchase, "gfx/fstock/tanks.png") { tmpl_vehicle_purchase()}
+spriteset (set_wagon_tanks, "gfx/fstock/tanks.png") { tmpl_half_row(15) }
+
+item(FEAT_TRAINS, item_wagon_tanks) {
+
+    property {
+        name:                         string(STR_NAME_WAGON_TANK);
+        climates_available:           bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);     // not available in toyland:
+        introduction_date:            date(1945, 3, 1);
+        model_life:                   VEHICLE_NEVER_EXPIRES;
+        vehicle_life:                 65;
+	    reliability_decay:            20;
+		refittable_cargo_classes: bitmask(CC_LIQUID);
+		non_refittable_cargo_classes: 0;
+		cargo_allow_refit: [OIL_, RUBR, WATR, COLA, PLST, FZDR, BEER, DYES, FISH, MILK, PETR, PLAS, RFPR];
+		cargo_disallow_refit: [PASS, COAL, MAIL, LVST, GOOD, GRAI, WOOD, IORE, STEL, VALU, PAPR, WHEA, FOOD, GOLD, FRUT, MAIZ, CORE, DIAM, SUGR, TOYS, BATT, SWET, TOFF, CTCD, BUBL, AORE, BDMT, BRCK, CERA, CERE, CLAY, CMNT, COPR, ENSP, FERT, FICR, FMSP, FRVG, GLAS, GRVL, LIME, MNSP, OLSD, POTA, RCYC, SAND, SCMT, SGBT, SGCN, SULP, TOUR, VEHI, WDPR, WOOL];
+
+
+        loading_speed:                10; 
+        ai_special_flag: AI_FLAG_CARGO;
+        cost_factor:                  45;
+        running_cost_factor:          3; 
+        sprite_id:                    SPRITE_ID_NEW_TRAIN;
+        speed:                        100 km/h; 
+        misc_flags:                   bitmask();
+        refit_cost:                   0; 
+        track_type:                   RAIL; 
+        running_cost_base:            RUNNING_COST_NONE;
+        dual_headed:                  0;
+        cargo_capacity:               72; 
+        weight:                       33 ton; 
+        ai_engine_rank:               80; 
+        air_drag_coefficient:         0.07;
+        bitmask_vehicle_info:         0;
+		length:						  8;
+    }
+    graphics {
+
+        purchase:                     set_wagon_tanks_purchase;
+		set_wagon_tanks;
+    }
+}
